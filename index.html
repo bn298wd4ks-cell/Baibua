@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ถึงใบบัว</title>
+<style>
+body{
+  background:#fff1f7;
+  font-family:-apple-system, BlinkMacSystemFont, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+}
+.envelope{
+  width:280px;
+  height:180px;
+  background:#ff5c8a;
+  position:relative;
+  cursor:pointer;
+  border-radius:12px;
+}
+.envelope::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:0;
+  height:0;
+  border-left:140px solid transparent;
+  border-right:140px solid transparent;
+  border-top:90px solid #ff8fb1;
+}
+.card{
+  position:absolute;
+  top:20px;
+  left:15px;
+  width:250px;
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 1s ease;
+}
+.open .card{
+  opacity:1;
+  transform:translateY(0);
+}
+h1{color:#ff5c8a;}
+p{color:#444; font-size:16px; line-height:1.8;}
+</style>
+</head>
+<body>
+
+<div class="envelope" onclick="this.classList.add('open')">
+  <div class="card">
+    <h1>ใบบัว 💗</h1>
+    <p>
+      เค้ารู้นะว่าเธออาจจะเหนื่อย<br>
+      และตอนนี้อาจไม่อยากรักใคร<br><br>
+      เค้าไม่โกรธ ไม่เร่ง ไม่กดดัน<br>
+      แค่ขอให้รู้ว่า<br>
+      เค้ายังรออยู่ตรงนี้เสมอ<br><br>
+      คิดถึงเสมอ 💗
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
